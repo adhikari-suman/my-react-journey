@@ -8,14 +8,14 @@ export default function Player({ name, symbol }) {
   let playerName = <span className="player-name">{name}</span>;
 
   if (isEditing) {
-    playerName = <input value={name} required />;
+    playerName = <input type="text" value={name} required />;
   }
 
   return (
     <li>
       <span className="player">
         {playerName}
-        <span className="plyaer-symbol">{symbol}</span>
+        <span className="player-symbol">{symbol}</span>
       </span>
       <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
     </li>
